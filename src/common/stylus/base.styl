@@ -1,0 +1,27 @@
+body,html
+ line-height: 1
+ font-weight: 200
+ font-family: 'PingFang SC','STheitiSC-Light','Helvetica-Light',arial,sans-serif
+
+.clearfix
+	display: inline-block
+	&:after
+		display: block
+		content: '.'
+		heigth: 0
+		line-height: 0
+		clear: both
+		visibility: hidden
+
+@media (-webkit-min-device-pixel-ratio: 1.5),(min-device-aspect-ratio: 1.5)
+ .border-1px
+  &::after
+    -webkit-transform : scaleY(0.7)
+    transform : scaleY(0.7)
+ 
+@media (-webkit-min-device-pixel-ratio: 2),(min-device-aspect-ratio: 2)
+ .border-1px
+  &::after
+    -webkit-transform : scaleY(0.5)
+    transform : scaleY(0.5)
+/* base.styl 在border-1px类中定义的是全局变量，用于横线的缩放 */
